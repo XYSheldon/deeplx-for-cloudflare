@@ -9,7 +9,7 @@ app
   .post("/translate", async (c) => {
     const params = await c.req.json().catch(() => ({}));
     const result = await query(params, {
-      proxyEndpoint: "https://ideepl.vercel.app/jsonrpc",
+      proxyEndpoint: "https://www2.deepl.com/jsonrpc",
     });
     return c.json(result, result.code);
   });
